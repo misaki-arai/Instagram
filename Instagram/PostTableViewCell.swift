@@ -15,6 +15,8 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var likeLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var captionLabel: UILabel!
+    @IBOutlet weak var commentButton: UIButton!
+    @IBOutlet weak var commentLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -56,6 +58,20 @@ class PostTableViewCell: UITableViewCell {
         } else {
             let buttonImage = UIImage(named: "like_none")
             self.likeButton.setImage(buttonImage, for: .normal)
+        }
+        
+        guard let commentArray = postData.comments else {
+            commentLabel.isHidden = true
+            return
+        }
+        
+        var indexNum = 0
+        
+        while indexNum < commentArray.count {
+            let commentString = commentArray[indexNum]
+            let commentLabelString = "\(commentString)"
+            self.commentLabel.text! += commentLabelString
+            indexNum += 1
         }
     }
 }

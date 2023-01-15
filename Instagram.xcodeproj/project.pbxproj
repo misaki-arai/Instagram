@@ -23,6 +23,7 @@
 		7965E894294F1E80007237B4 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7965E893294F1E80007237B4 /* PostData.swift */; };
 		7965E89B294F3365007237B4 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7965E899294F3365007237B4 /* PostTableViewCell.swift */; };
 		7965E89C294F3365007237B4 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7965E89A294F3365007237B4 /* PostTableViewCell.xib */; };
+		7980BD182969A38F00DF0592 /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7980BD172969A38F00DF0592 /* CommentsViewController.swift */; };
 		8FABED5E7B39C085EE0D78E2 /* Pods_Instagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 459860375283498C0875459C /* Pods_Instagram.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		7965E893294F1E80007237B4 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
 		7965E899294F3365007237B4 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		7965E89A294F3365007237B4 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
+		7980BD172969A38F00DF0592 /* CommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,10 +94,11 @@
 				7942FBF6294931EE00D67FC2 /* SettingViewController.swift */,
 				7942FBF8294A7EC200D67FC2 /* TabBarController.swift */,
 				7965E891294EF6FE007237B4 /* Const.swift */,
+				7980BD172969A38F00DF0592 /* CommentsViewController.swift */,
 				7965E893294F1E80007237B4 /* PostData.swift */,
+				7942FBE029492FF100D67FC2 /* Main.storyboard */,
 				7965E899294F3365007237B4 /* PostTableViewCell.swift */,
 				7965E89A294F3365007237B4 /* PostTableViewCell.xib */,
-				7942FBE029492FF100D67FC2 /* Main.storyboard */,
 				7942FBE329492FF100D67FC2 /* Assets.xcassets */,
 				7942FBE529492FF100D67FC2 /* LaunchScreen.storyboard */,
 				7942FBE829492FF100D67FC2 /* Info.plist */,
@@ -246,6 +249,7 @@
 				7942FBF7294931EE00D67FC2 /* SettingViewController.swift in Sources */,
 				7965E894294F1E80007237B4 /* PostData.swift in Sources */,
 				7942FBEF2949315B00D67FC2 /* LoginViewController.swift in Sources */,
+				7980BD182969A38F00DF0592 /* CommentsViewController.swift in Sources */,
 				7942FBDB29492FF100D67FC2 /* AppDelegate.swift in Sources */,
 				7942FBDD29492FF100D67FC2 /* SceneDelegate.swift in Sources */,
 				7965E892294EF6FE007237B4 /* Const.swift in Sources */,

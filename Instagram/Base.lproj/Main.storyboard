@@ -88,6 +88,64 @@
             </objects>
             <point key="canvasLocation" x="28" y="-598"/>
         </scene>
+        <!--Comment View Controller-->
+        <scene sceneID="cea-NW-7Ll">
+            <objects>
+                <viewController storyboardIdentifier="Comment" id="gnM-oB-ji6" customClass="CommentViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZeX-ww-MK3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="コメント" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KlU-X1-1Ns">
+                                <rect key="frame" x="37.666666666666657" y="64" width="300" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="gtZ-2C-rIv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zlT-KF-aXC">
+                                <rect key="frame" x="37.666666666666657" y="108" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="uDd-wW-Lrr"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="投稿" backgroundImage="btn"/>
+                                <connections>
+                                    <action selector="handlePostButton:" destination="gnM-oB-ji6" eventType="touchUpInside" id="0hJ-l6-99o"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlH-lf-ZpV">
+                                <rect key="frame" x="37.666666666666657" y="158" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="Xm0-VN-Zqh"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="キャンセル" backgroundImage="btn"/>
+                                <connections>
+                                    <action selector="handleCancelButton:" destination="gnM-oB-ji6" eventType="touchUpInside" id="LD8-a6-iYF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1WH-XI-Ywb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KlU-X1-1Ns" firstAttribute="centerX" secondItem="ZeX-ww-MK3" secondAttribute="centerX" id="5K6-vb-YvW"/>
+                            <constraint firstItem="zlT-KF-aXC" firstAttribute="centerX" secondItem="ZeX-ww-MK3" secondAttribute="centerX" id="HF5-PJ-3yX"/>
+                            <constraint firstItem="KlU-X1-1Ns" firstAttribute="top" secondItem="1WH-XI-Ywb" secondAttribute="top" constant="20" id="b3m-Sc-K2z"/>
+                            <constraint firstItem="mlH-lf-ZpV" firstAttribute="centerX" secondItem="ZeX-ww-MK3" secondAttribute="centerX" id="ebG-Cf-taP"/>
+                            <constraint firstItem="zlT-KF-aXC" firstAttribute="top" secondItem="KlU-X1-1Ns" secondAttribute="bottom" constant="10" id="tPV-RS-Bc1"/>
+                            <constraint firstItem="mlH-lf-ZpV" firstAttribute="top" secondItem="zlT-KF-aXC" secondAttribute="bottom" constant="10" id="x8g-jd-2kd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textField" destination="KlU-X1-1Ns" id="s8y-0V-HbK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JZH-sQ-KhN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="810" y="-599"/>
+        </scene>
         <!--HomeViewController-->
         <scene sceneID="hco-KF-jYh">
             <objects>
@@ -99,6 +157,11 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Zrc-ha-ttI">
                                 <rect key="frame" x="0.0" y="44" width="375" height="685"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="yDS-M0-3tY" id="deb-KC-g9J"/>
+                                    <outlet property="delegate" destination="yDS-M0-3tY" id="aMm-yI-Zck"/>
+                                    <outlet property="prefetchDataSource" destination="yDS-M0-3tY" id="79z-Yd-Tu1"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SUx-Bo-lrt"/>
