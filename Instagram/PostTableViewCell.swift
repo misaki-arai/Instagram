@@ -65,13 +65,13 @@ class PostTableViewCell: UITableViewCell {
             return
         }
         
-        var indexNum = 0
+        commentLabel.isHidden = false
         
-        while indexNum < commentArray.count {
-            let commentString = commentArray[indexNum]
-            let commentLabelString = "\(commentString)"
-            self.commentLabel.text! += commentLabelString
-            indexNum += 1
+        var comments = ""
+        for comment in commentArray {
+            comments += "\(comment)"
         }
+        self.commentLabel.text = comments
     }
 }
+
